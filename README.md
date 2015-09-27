@@ -1,2 +1,2 @@
 # InteractiveTransition
-iOS Swift 1.3 - Interactive transition example
+iOS example - Interactive transition between screens using gestures.
