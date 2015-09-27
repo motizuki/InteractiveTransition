@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="JJr-KV-Eit">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Left View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LeftViewController" customModule="IteractiveTransition" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.29259214960000002" green="1" blue="0.59745608230000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <connections>
+                        <segue destination="v1k-hB-hDX" kind="unwind" identifier="unwindLeft" unwindAction="unwindToContainerVC:" id="pcH-Lp-vkI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="v1k-hB-hDX" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="217" y="738"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="050-dh-Jnu">
+            <objects>
+                <viewController id="JJr-KV-Eit" customClass="MainViewController" customModule="IteractiveTransition" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nnn-UT-iij"/>
+                        <viewControllerLayoutGuide type="bottom" id="sX7-z6-fmd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6jW-RR-UvF">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.59935996160000005" green="0.74699126680000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="custom" identifier="leftSegue" id="Q2T-wP-YN0"/>
+                        <segue destination="Gs9-9i-TQY" kind="custom" identifier="rightSegue" id="SP6-8P-QKV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e5L-0I-Xhu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="849" y="-29"/>
+        </scene>
+        <!--Right View Controller-->
+        <scene sceneID="5fv-o4-V1O">
+            <objects>
+                <viewController id="Gs9-9i-TQY" customClass="RightViewController" customModule="IteractiveTransition" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="F5X-Hw-d5L"/>
+                        <viewControllerLayoutGuide type="bottom" id="Raa-Ui-hc2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Kb5-c1-62y">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.39975297399999998" blue="0.35800047740000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <connections>
+                        <segue destination="U6v-kc-5CX" kind="unwind" identifier="unwindRight" unwindAction="unwindToContainerVC:" id="wEw-cJ-FzU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zpW-An-T2M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="U6v-kc-5CX" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1549" y="558"/>
+        </scene>
+    </scenes>
+</document>
