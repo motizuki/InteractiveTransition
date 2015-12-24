@@ -165,6 +165,8 @@
 		1BBF25451BA0179100C8CA5D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0720;
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "Gustavo Motizuki";
 				TargetAttributes = {
@@ -423,6 +425,7 @@
 				1BBF256E1BA0179100C8CA5D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1BBF256F1BA0179100C8CA5D /* Build configuration list for PBXNativeTarget "IteractiveTransitionTests" */ = {
 			isa = XCConfigurationList;
@@ -431,6 +434,7 @@
 				1BBF25711BA0179100C8CA5D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

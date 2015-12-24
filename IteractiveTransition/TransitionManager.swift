@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TransitionManager: UIPercentDrivenInteractiveTransition, UIViewControllerAnimatedTransitioning, UIViewControllerTransitioningDelegate, UIViewControllerInteractiveTransitioning {
+class TransitionManager: UIPercentDrivenInteractiveTransition, UIViewControllerAnimatedTransitioning, UIViewControllerTransitioningDelegate {
 
 //    private var presenting = false
     private var interactive = false
@@ -179,7 +179,7 @@ class TransitionManager: UIPercentDrivenInteractiveTransition, UIViewControllerA
     
     func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
         
-        let container = transitionContext.containerView()
+        guard let container = transitionContext.containerView() else { return }
         let screens : (from:UIViewController, to:UIViewController) = (transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)!, transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)!)
         
         var fromViewController: UIViewController?
@@ -237,7 +237,7 @@ class TransitionManager: UIPercentDrivenInteractiveTransition, UIViewControllerA
         
         let duration = self.transitionDuration(transitionContext)
         
-        UIView.animateWithDuration(duration, delay: 0.0, usingSpringWithDamping: 1, initialSpringVelocity: 0.8, options: nil, animations: {
+        UIView.animateWithDuration(duration, delay: 0.0, usingSpringWithDamping: 1, initialSpringVelocity: 0.8, options: [], animations: {
             
             
             if self.goingLeft{
@@ -272,7 +272,7 @@ class TransitionManager: UIPercentDrivenInteractiveTransition, UIViewControllerA
     }
     
     // return how many seconds the transiton animation will take
-    func transitionDuration(transitionContext: UIViewControllerContextTransitioning) -> NSTimeInterval {
+    func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
         return 0.5
     }
     
